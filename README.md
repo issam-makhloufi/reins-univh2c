@@ -28,3 +28,30 @@ pour l'intégration du SSO, des tutoriels montrenet l'ajout de Beans existant de
 pour le déploiment, on a 3 instance de la VM ENT qui contient java et tomcat, on va tester les fichiers war existants de l'ENT et différents portlets installés sur le tomcat embarqué avec spring boot, si tout marche alors on déploit la solution en War en plus des war existants sur la nouvelle version de tomcat. Sinon on déploit la reins en Jar, et on lance dans la même instance en configurant le tomcat embarqué pour un environnment de production (validation de la charge par instance dans la phase de test par les outils adéquats JMeter...)
 
 Pour la gestion des versions, on utilise Git et GitHub, on veillera à ne pas mettre des données sensibles étant donnée que l'accès gratuit impose que ce soit public, l'accès en privé coute 70DH/mois.
+
+
+Commandes pour ajouter le projet dans  STS:
+
+
+eclipse avec le plugin STS, ou mieux encore STS depuis le site spring (comprend le plugin MyLin pour GitHub).
+
+window -> show view -> other -> type in: Git -> Git repositories +  git staging.
+
+Window -> preferences -> git -> configuration -> add entry : key= user.email value= imakhloufi@etude.univcasa.ma 
+												-> add entry: key user.name  value= issam-makhloufi-univh2c
+												-> apply  -> ok
+												
+Window -> preferences -> git   vérifier default repository folder.
+
+
+
+package explorer -> import -> git -> repositories from gitHub  -> reins-univh2c -> search -> finish
+
+package explorer -> import -> maven -> existing maven project -> browse (git folder ) select project folder (demoWeb )
+
+commit -> ajout au repo Local 
+commit and push ( ajout au repo distant)
+ ^
+/!\ le message est obligatoire pour chaque commit.
+---
+-> utilisation de la seule branche Master.
